@@ -6,7 +6,8 @@ __lua__
 #include test.lua
 
 function _init()
-  change_state("menu") -- set initial state
+		test_init()
+  change_state("test") -- set initial state
 end
 
 function _update()

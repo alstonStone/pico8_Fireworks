@@ -3,7 +3,7 @@
 -- 1. define the states table
 states = {}
 
--- 2. define the menu state
+-------------------Menu State---------------------------------------------------
 states.menu = {
   update = function()
 
@@ -13,7 +13,7 @@ states.menu = {
   end
 }
 
--- 3. define the playing state
+-------------------Game State---------------------------------------------------
 states.play = {
   update = function()
     -- gameplay logic goes here
@@ -21,6 +21,16 @@ states.play = {
   draw = function()
     cls()
     print("playing game...", 40, 60, 7)
+  end
+}
+
+-------------------Test State---------------------------------------------------
+states.test = {
+  update = function()
+    test_update()
+  end,
+  draw = function()
+    test_draw()
   end
 }
 
