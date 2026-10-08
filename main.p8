@@ -5,13 +5,14 @@ __lua__
 #include game-manager.lua
 #include test.lua
 #include firework-builder.lua
+#include firework.lua
 #include menu.lua
 #include menu-items.lua
 
 
 function _init()
 	
-  change_state("build")
+  change_state("menu")
   if state=="test" then
     test_init()
   end

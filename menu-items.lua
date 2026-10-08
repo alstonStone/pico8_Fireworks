@@ -60,8 +60,8 @@ function create_launch_button(x,y,color)
 				if mx>=self.x and mx<=self.x+size and my>=self.y and my<=self.y+size then
 					self.hover=true
 					if mbut==1 then
-						--launch code here
-						--switch states/scenes.
+						firework_init()
+						change_state("display")
 					end
 				else
 					self.hover=false

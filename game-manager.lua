@@ -7,31 +7,10 @@ state=""
 -------------------Menu State---------------------------------------------------
 states.menu = {
   update = function()
-
-  end,
-  draw = function()
-    menu_draw()
-  end
-}
-
--------------------Game State---------------------------------------------------
-states.play = {
-  update = function()
-    -- gameplay logic goes here
-  end,
-  draw = function()
-    cls()
-    print("playing game...", 40, 60, 7)
-  end
-}
-
--------------------Build State---------------------------------------------------
-states.build = {
-  update = function()
     menu_update()
   end,
   draw = function()
-   menu_draw()
+    menu_draw()
   end
 }
 
@@ -43,6 +22,16 @@ states.launch = {
   draw = function()
     cls()
     print("playing game...", 40, 60, 7)
+  end
+}
+
+-------------------Display State---------------------------------------------------
+states.display = {
+  update = function()
+    firework_update()
+  end,
+  draw = function()
+    firework_draw()
   end
 }
 
