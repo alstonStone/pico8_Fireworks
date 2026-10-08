@@ -14,14 +14,13 @@ states.menu = {
   end
 }
 
--------------------Launch State---------------------------------------------------
-states.launch = {
+-------------------transition State---------------------------------------------------
+states.transition = {
   update = function()
-    -- gameplay logic goes here
+    transition_update()
   end,
   draw = function()
-    cls()
-    print("playing game...", 40, 60, 7)
+    transition_draw()
   end
 }
 

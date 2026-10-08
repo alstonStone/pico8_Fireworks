@@ -2,16 +2,16 @@
 
 function firework_init()
 	launch()
-	duration=30*.8--seconds 30fps
+	duration=30*.6--seconds 30fps
 end
 
 
 function firework_update()
 	if not exploded then
   		ry+=rvy
-  		if ry<=20 then
+  		if ry<=30 then
    			exploded=true
-			for i=1,500 do
+			for i=1,800 do
 				local turn=rnd(1)       -- random direction
 				local speed=0.3+rnd(2) -- random speed
 
@@ -24,9 +24,7 @@ function firework_update()
 			end
   		end
 	else
-		if duration >0 then
-			duration-=1
-		end
+		duration-=1
 	end
 	old_parts=parts
 	parts={}
@@ -38,6 +36,9 @@ function firework_update()
 			add(parts,p)
 		end
  	end
+ 	if duration <= -(30*1) then
+ 		run()
+ 	end
 end
 
 
@@ -47,7 +48,7 @@ function firework_draw()
 		pset(rx,ry,7)
 	else
 		if duration<=0 then
-			for i = 1, (count(parts)/3)+1 do
+			for i = 1, (count(parts)/4)+1 do
 			  deli(parts)
 			end
 		end

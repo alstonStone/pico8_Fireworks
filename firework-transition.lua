@@ -1,6 +1,6 @@
---test--
+--firework transition--
 
-function test_init()
+function transition_init()
     rocket={
         x=60,
         y=112,
@@ -10,8 +10,8 @@ function test_init()
 end
 
 
-function test_update()
-    if rocket.animation_tick>=30*1 then
+function transition_update()
+    if rocket.animation_tick>=30*.5 then
     rocket.y-=rocket.dy
     rocket.dy+=0.01*rocket.animation_tick
     end
@@ -24,7 +24,7 @@ function test_update()
 end
 
 
-function test_draw()
+function transition_draw()
     cls()
     spr(16,rocket.x,rocket.y)
     spr(32,rocket.x,rocket.y+8)
@@ -34,6 +34,3 @@ function test_draw()
         spr(33,rocket.x,rocket.y+16)
     end
 end
-
-
- 
