@@ -4,8 +4,10 @@ __lua__
 --main--
 #include game-manager.lua
 #include test.lua
+#include firework-builder.lua
 #include menu.lua
 #include menu-items.lua
+
 
 function _init()
 	
