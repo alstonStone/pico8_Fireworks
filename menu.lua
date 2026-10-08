@@ -35,7 +35,6 @@ function draw_border()
 	rect(0,0,127,127,border_color)
 	draw_display_section()
 	draw_launch_section()
-	print(stat(32)..", "..stat(33),0,0,7)
 end
 
 function draw_display_section()

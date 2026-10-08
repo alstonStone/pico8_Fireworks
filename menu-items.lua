@@ -58,7 +58,7 @@ function create_launch_button(x,y,color)
 					click=false
 				end
 			else
-				if mx>=self.x and mx<=self.x+size and my>=self.y and my<=self.y+size then
+				if mx>=self.x and mx<=self.x+self.width and my>=self.y and my<=self.y+self.height then
 					self.hover=true
 					if mbut==1 then
 						transition_init()

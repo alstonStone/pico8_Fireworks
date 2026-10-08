@@ -2,6 +2,7 @@
 
 function firework_init()
 	launch()
+	sfx(3)
 	duration=30*.6--seconds 30fps
 end
 
