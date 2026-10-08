@@ -5,6 +5,7 @@ __lua__
 #include game-manager.lua
 #include test.lua
 #include menu.lua
+#include menu-items.lua
 
 function _init()
 	

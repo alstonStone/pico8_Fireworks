@@ -4,10 +4,14 @@ function menu_init()
 	poke(0x5f2d, 0x1)
 	border_color=1
 	select_color=7
+	mx = 0
+  	my = 0
+	menu_items_init()
 end
 
 
 function menu_update()
+	update_menu_items()
 	update_mouse()
 end
 
@@ -15,6 +19,7 @@ end
 function menu_draw()
  cls()
  draw_border()
+ draw_menu_items()
  draw_mouse()--keep last to draw on top
 end
 
@@ -23,9 +28,6 @@ function update_mouse()
   mx = stat(32)
   my = stat(33)
   mbut = stat(34)
-  -- Relative movement (for FPS style or deltas)
-  rx = stat(38)
-  ry = stat(39)
 end
 
 
@@ -33,6 +35,7 @@ function draw_border()
 	rect(0,0,127,127,border_color)
 	draw_display_section()
 	draw_launch_section()
+	print(stat(32)..", "..stat(33),0,0,7)
 end
 
 function draw_display_section()
@@ -50,7 +53,7 @@ end
 
 function draw_mouse()
 	--circfill(stat(32), stat(33), 2, 7)
-	spr(0,stat(32),stat(33))
+	spr(0,mx,my)
 end
 
 
