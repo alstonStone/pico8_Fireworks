@@ -10,6 +10,7 @@ function firework_update()
 	if not exploded then
   		ry+=rvy
   		if ry<=30 then
+  			sfx(2)
    			exploded=true
 			for i=1,800 do
 				local turn=rnd(1)       -- random direction

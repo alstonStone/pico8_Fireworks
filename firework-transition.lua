@@ -7,13 +7,15 @@ function transition_init()
         dy=0,
         animation_tick=1
     }
+    sfx(0)
 end
 
 
 function transition_update()
     if rocket.animation_tick>=30*.5 then
-    rocket.y-=rocket.dy
-    rocket.dy+=0.01*rocket.animation_tick
+
+	    rocket.y-=rocket.dy
+	    rocket.dy+=0.01*rocket.animation_tick
     end
     rocket.animation_tick+=1
 

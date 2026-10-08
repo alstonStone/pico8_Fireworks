@@ -25,6 +25,7 @@ function create_menu_item(x,y,color)
 				if mx>=self.x and mx<=self.x+size and my>=self.y and my<=self.y+size then
 					self.hover=true
 					if mbut==1 then
+						sfx(1)
 						add_color(self.color)
 						click=true
 					end
