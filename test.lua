@@ -15,8 +15,8 @@ function test_update()
    exploded=true
    for i=1,40 do
     local a=rnd(1)       -- random direction
-    -- local s=0.5+rnd(1.5) -- random speed
-    local s=.2 -- random speed
+    local s=0.5+rnd(.8) -- random speed
+    
     add(parts,{
      x=rx, y=ry,
      dx=cos(a)*s,

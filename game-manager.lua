@@ -2,6 +2,7 @@
 
 -- 1. define the states table
 states = {}
+state=""
 
 -------------------Menu State---------------------------------------------------
 states.menu = {
@@ -24,6 +25,27 @@ states.play = {
   end
 }
 
+-------------------Build State---------------------------------------------------
+states.build = {
+  update = function()
+    menu_update()
+  end,
+  draw = function()
+   menu_draw()
+  end
+}
+
+-------------------Launch State---------------------------------------------------
+states.launch = {
+  update = function()
+    -- gameplay logic goes here
+  end,
+  draw = function()
+    cls()
+    print("playing game...", 40, 60, 7)
+  end
+}
+
 -------------------Test State---------------------------------------------------
 states.test = {
   update = function()
@@ -36,5 +58,6 @@ states.test = {
 
 -- state manager functions
 function change_state(new_state)
+  state=new_state
   current_state = states[new_state]
 end
